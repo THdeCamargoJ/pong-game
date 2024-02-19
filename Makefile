@@ -378,7 +378,7 @@ ifeq ($(PLATFORM),PLATFORM_ANDROID)
     export PROJECT_NAME
     export SRC_DIR
 else
-    MAKEFILE_PARAMS = $(PROJECT_NAME)
+    MAKEFILE_PARAMS = src/$(PROJECT_NAME)
 endif
 
 # Default target entry

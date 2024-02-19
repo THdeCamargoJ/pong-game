@@ -1,26 +1,9 @@
 # Raylib C++ Starter Template
 
-Raylib C++ Starter Template for Visual Studio Code on Windows.
+Raylib C++ Starter Template for Visual Studio Code on Windows provided by [Nick Koumaris](https://www.youtube.com/channel/UC3ivOTE5EgpmF2DHLBmWIWg)
+under the MIT License in the [LICENSE](License.txt) file.
 
-This demo project contains a bouncing ball raylib example program.
+# The Pong-Game
 
-It works with raylib version 4.5.
-Tested on both Windows 10 and Windows 11.
-
-# Video Tutorial
-
-<p align="center">
-  <img src="preview.jpg" alt="" width="800">
-</p>
-
-<p align="center">
-🎥 <a href="https://www.youtube.com/watch?v=PaAcVk5jUd8">Video Tutorial on YouTube</a>
-</p>
-
-<br>
-<br>
-<p align="center">
-| 📺 <a href="https://www.youtube.com/channel/UC3ivOTE5EgpmF2DHLBmWIWg">My YouTube Channel</a>
-| 🌍 <a href="http://www.educ8s.tv">My Website</a> | <br>
-</p>
-
+This game was developed following the tutorial on Nick Koumaris' youtube channel: [Pong Game with C++ and Raylib - Beginner Tutorial](https://youtu.be/VLJlTaFvHo4)
+on Febuary 18th, 2023.
