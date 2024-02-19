@@ -1,5 +1,6 @@
 #include <iostream>
 #include <raylib.h>
+#include "ball.h"
 
 using namespace std;
 
@@ -12,6 +13,14 @@ int main () {
     const int rectange_height = 120;
     const int rectange_width = 25;
 
+    Ball ball;
+
+    ball.radius = 20;
+    ball.x = screen_width/2;
+    ball.y = screen_height/2;
+    ball.x_speed = 7;
+    ball.y_speed = 7;
+
     InitWindow(screen_width, screen_height, "My Pong Game");
     
     SetTargetFPS(60); // 60 fps - draws 60 frames per second
@@ -19,8 +28,10 @@ int main () {
     while(WindowShouldClose() == false) {
         BeginDrawing();
 
-        // ball
-        DrawCircle(screen_width / 2, screen_height / 2, 20, WHITE);
+        ClearBackground(BLACK);
+
+        ball.Draw();
+        ball.Move();
 
         // first pad
         DrawRectangle(

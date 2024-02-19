@@ -42,10 +42,10 @@
           "cwd": "${workspaceFolder}",
           "environment": [],
           "externalConsole": false,
-          "program": "${workspaceFolder}/src/${fileBasenameNoExtension}",
+          "program": "${workspaceFolder}/${fileBasenameNoExtension}",
           "MIMode": "gdb",
           "windows": {
-            "program": "${workspaceFolder}/src/${fileBasenameNoExtension}.exe",
+            "program": "${workspaceFolder}/${fileBasenameNoExtension}.exe",
             "miDebuggerPath": "C:/raylib/w64devkit/bin/gdb.exe"
           },
           "osx": {

@@ -370,7 +370,7 @@ OBJ_DIR = obj
 # Define all object files from source files
 SRC = $(call rwildcard, *.c, *.h)
 #OBJS = $(SRC:$(SRC_DIR)/%.c=$(OBJ_DIR)/%.o)
-OBJS ?= main.cpp
+OBJS ?= main.c
 
 # For Android platform we call a custom Makefile.Android
 ifeq ($(PLATFORM),PLATFORM_ANDROID)
@@ -378,7 +378,7 @@ ifeq ($(PLATFORM),PLATFORM_ANDROID)
     export PROJECT_NAME
     export SRC_DIR
 else
-    MAKEFILE_PARAMS = src/$(PROJECT_NAME)
+    MAKEFILE_PARAMS = $(PROJECT_NAME)
 endif
 
 # Default target entry
@@ -418,4 +418,3 @@ ifeq ($(PLATFORM),PLATFORM_WEB)
 	del *.o *.html *.js
 endif
 	@echo Cleaning done
-
