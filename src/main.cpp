@@ -12,6 +12,9 @@ int main () {
 
     const int screen_offset = 10;
 
+    int player_score = 0;
+    int cpu_score = 0;
+
     Ball ball;
     Paddle player;
     CpuPaddle cpu;
@@ -71,6 +74,17 @@ int main () {
         ) {
             ball.x_speed *= -1;
         }
+
+        if (ball.x + ball.radius >= screen_width) {
+            cpu_score += 1;
+            ball.ResetBall();
+        } else if (ball.x - ball.radius <= 0) {
+            player_score += 1;
+            ball.ResetBall();
+        }
+
+        DrawText(TextFormat("%i", cpu_score), screen_width / 4 - 20, 20, 80, WHITE);
+        DrawText(TextFormat("%i", player_score), 3 * screen_width / 4 - 20, 20, 80, WHITE);
 
         // middle line: separates left player from right player fields
         DrawLine(screen_width / 2, 0, screen_width / 2, screen_height, WHITE);

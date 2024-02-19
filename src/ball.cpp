@@ -15,3 +15,13 @@ void Ball::Move() {
         x_speed *= -1;
     }
 }
+
+void Ball::ResetBall() {
+    x = GetScreenWidth() / 2;
+    y = GetScreenHeight() / 2;
+
+    int speed_choices[2] = {1, -1};
+
+    x_speed *= speed_choices[GetRandomValue(0, 1)];
+    y_speed *= speed_choices[GetRandomValue(0, 1)];
+}

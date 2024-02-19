@@ -10,6 +10,8 @@ class Ball {
         void Draw();
 
         void Move();
+        
+        void ResetBall();
 };
 
 #endif
