@@ -52,6 +52,26 @@ int main () {
         cpu.Draw();
         cpu.Move(ball.y);
 
+        if (
+            CheckCollisionCircleRec(
+                Vector2{ball.x, ball.y}, ball.radius,
+                Rectangle{
+                    player.x,
+                    player.y,
+                    player.width,
+                    player.height
+            }) || CheckCollisionCircleRec(
+                Vector2{ball.x, ball.y}, ball.radius,
+                Rectangle{
+                    cpu.x,
+                    cpu.y,
+                    cpu.width,
+                    cpu.height
+            })
+        ) {
+            ball.x_speed *= -1;
+        }
+
         // middle line: separates left player from right player fields
         DrawLine(screen_width / 2, 0, screen_width / 2, screen_height, WHITE);
 
