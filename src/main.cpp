@@ -1,6 +1,7 @@
 #include <iostream>
 #include <raylib.h>
 #include "ball.h"
+#include "paddle.h"
 
 using namespace std;
 
@@ -14,12 +15,19 @@ int main () {
     const int rectange_width = 25;
 
     Ball ball;
+    Paddle player;
 
     ball.radius = 20;
     ball.x = screen_width/2;
     ball.y = screen_height/2;
     ball.x_speed = 7;
     ball.y_speed = 7;
+
+    player.width = 25;
+    player.height = 120;
+    player.x = screen_width - (player.width + screen_offset);
+    player.y = screen_height / 2 - player.height / 2;
+    player.speed = 6;
 
     InitWindow(screen_width, screen_height, "My Pong Game");
     
@@ -33,18 +41,12 @@ int main () {
         ball.Draw();
         ball.Move();
 
+        player.Draw();
+        player.Move();
+
         // first pad
         DrawRectangle(
             screen_offset,
-            screen_height / 2 - rectange_height / 2,
-            rectange_width,
-            rectange_height,
-            WHITE
-        );
-
-        // second pad
-        DrawRectangle(
-            screen_width - (rectange_width + screen_offset),
             screen_height / 2 - rectange_height / 2,
             rectange_width,
             rectange_height,
