@@ -10,6 +10,9 @@ class Paddle {
         void Draw();
 
         void Move();
+
+    protected:
+        void KeepMoveInsideBoundaries();
 };
 
 #endif

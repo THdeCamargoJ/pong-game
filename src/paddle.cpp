@@ -12,6 +12,10 @@ void Paddle::Move() {
         y += speed;
     }
 
+    KeepMoveInsideBoundaries();
+}
+
+void Paddle::KeepMoveInsideBoundaries() {
     if (y <= 0) {
         y = 0;
     } else if (y + height >= GetScreenHeight()) {
